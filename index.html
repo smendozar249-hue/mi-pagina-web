@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glam Beauty | Tienda de Maquillaje</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <a href="#inicio" class="logo">Glam <span>Beauty</span></a>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <button class="cart-button" onclick="mostrarCarrito()">
+        🛍️ Carrito <span id="contador">0</span>
+    </button>
+</header>
+
+
+<section id="inicio" class="hero">
+
+    <div class="hero-content">
+        <p class="subtitle">✨ MAQUILLAJE & BELLEZA ✨</p>
+
+        <h1>
+            Tu belleza,
+            <span>tu estilo</span>
+        </h1>
+
+        <p class="hero-description">
+            Descubre productos de maquillaje para crear
+            looks increíbles y expresar tu personalidad.
+        </p>
+
+        <a href="#productos" class="hero-button">
+            Comprar ahora
+        </a>
+    </div>
+
+    <div class="hero-image">
+        <img
+            src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80"
+            alt="Productos de maquillaje">
+    </div>
+
+</section>
+
+
+<section id="productos" class="products">
+
+    <p class="subtitle">NUESTRA COLECCIÓN</p>
+
+    <h2>Productos destacados</h2>
+
+    <p class="description">
+        Encuentra tus productos favoritos de maquillaje.
+    </p>
+
+    <div class="search-box">
+        <input
+            type="text"
+            id="buscador"
+            placeholder="🔍 Buscar un producto..."
+            onkeyup="buscarProducto()">
+    </div>
+
+
+    <div class="products-grid">
+
+
+        <article class="product-card" data-name="labial">
+
+            <div class="product-image">
+                <img
+                    src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=600&q=80"
+                    alt="Labial">
+            </div>
+
+            <div class="product-info">
+                <span class="category">LABIOS</span>
+
+                <h3>Labial Velvet</h3>
+
+                <p>
+                    Color intenso con acabado elegante
+                    y textura suave.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$25.000</strong>
+
+                    <button onclick="agregarCarrito('Labial Velvet', 25000)">
+                        + Agregar
+                    </button>
+                </div>
+            </div>
+
+        </article>
+
+
+        <article class="product-card" data-name="paleta sombras">
+
+            <div class="product-image">
+                <img
+                    src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=600&q=80"
+                    alt="Paleta de maquillaje">
+            </div>
+
+            <div class="product-info">
+                <span class="category">OJOS</span>
+
+                <h3>Paleta Dream</h3>
+
+                <p>
+                    Tonos versátiles para looks naturales
+                    y glamorosos.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$45.000</strong>
+
+                    <button onclick="agregarCarrito('Paleta Dream', 45000)">
+                        + Agregar
+                    </button>
+                </div>
+            </div>
+
+        </article>
+
+
+        <article class="product-card" data-name="iluminador">
+
+            <div class="product-image">
+                <img
+                    src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80"
+                    alt="Maquillaje">
+            </div>
+
+            <div class="product-info">
+                <span class="category">ROSTRO</span>
+
+                <h3>Iluminador Glow</h3>
+
+                <p>
+                    Un brillo delicado para iluminar
+                    tu rostro.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$30.000</strong>
+
+                    <button onclick="agregarCarrito('Iluminador Glow', 30000)">
+                        + Agregar
+                    </button>
+                </div>
+            </div>
+
+        </article>
+
+
+        <article class="product-card" data-name="rubor blush">
+
+            <div class="product-image">
+                <img
+                    src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=600&q=80"
+                    alt="Rubor">
+            </div>
+
+            <div class="product-info">
+                <span class="category">ROSTRO</span>
+
+                <h3>Rubor Blush</h3>
+
+                <p>
+                    Dale un toque fresco y natural
+                    a tus mejillas.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$28.000</strong>
+
+                    <button onclick="agregarCarrito('Rubor Blush', 28000)">
+                        + Agregar
+                    </button>
+                </div>
+            </div>
+
+        </article>
+
+
+        <article class="product-card" data-name="base maquillaje">
+
+            <div class="product-image">
+                <img
+                    src="https://images.unsplash.com/photo-1631730486572-226d1c8a3b72?auto=format&fit=crop&w=600&q=80"
+                    alt="Base de maquillaje">
+            </div>
+
+            <div class="product-info">
+                <span class="category">ROSTRO</span>
+
+                <h3>Base Perfect Skin</h3>
+
+                <p>
+                    Acabado natural para un look
+                    uniforme y luminoso.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$50.000</strong>
+
+                    <button onclick="agregarCarrito('Base Perfect Skin', 50000)">
+                        + Agregar
+                    </button>
+                </div>
+            </div>
+
+        </article>
+
+
+        <article class="product-card" data-name="brochas">
+
+            <div class="product-image">
+                <img
+                    src="https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=600&q=80"
+                    alt="Brochas de maquillaje">
+            </div>
+
+            <div class="product-info">
+                <span class="category">ACCESORIOS</span>
+
+                <h3>Set de Brochas</h3>
+
+                <p>
+                    Brochas esenciales para completar
+                    tu rutina.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$35.000</strong>
+
+                    <button onclick="agregarCarrito('Set de Brochas', 35000)">
+                        + Agregar
+                    </button>
+                </div>
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<section id="nosotros" class="about">
+
+    <div class="about-image">
+        <img
+            src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=80"
+            alt="Maquillaje Glam Beauty">
+    </div>
+
+    <div class="about-text">
+
+        <p class="subtitle">SOBRE GLAM BEAUTY</p>
+
+        <h2>Maquillaje para expresar quién eres 💗</h2>
+
+        <p>
+            En Glam Beauty creemos que el maquillaje
+            es una forma de expresión, creatividad y estilo.
+        </p>
+
+        <p>
+            Queremos ayudarte a encontrar productos
+            que te permitan crear looks con los que
+            te sientas increíble.
+        </p>
+
+        <div class="features">
+
+            <div>
+                <span>💄</span>
+                <strong>Calidad</strong>
+            </div>
+
+            <div>
+                <span>🌸</span>
+                <strong>Estilo</strong>
+            </div>
+
+            <div>
+                <span>💗</span>
+                <strong>Confianza</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="contacto" class="contact">
+
+    <p class="subtitle">CONTÁCTANOS</p>
+
+    <h2>Estamos para ayudarte 💌</h2>
+
+    <p>
+        ¿Tienes alguna pregunta? Escríbenos.
+    </p>
+
+    <form onsubmit="enviarFormulario(event)">
+
+        <input
+            type="text"
+            id="nombre"
+            placeholder="Tu nombre"
+            required>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Tu correo electrónico"
+            required>
+
+        <textarea
+            id="mensaje"
+            placeholder="Escribe tu mensaje..."
+            required></textarea>
+
+        <button type="submit">
+            Enviar mensaje 💗
+        </button>
+
+    </form>
+
+</section>
+
+
+<footer>
+
+    <div class="logo">Glam <span>Beauty</span></div>
+
+    <p>
+        © 2026 Glam Beauty · Maquillaje & Belleza
+    </p>
+
+    <div>
+        Instagram · TikTok · Facebook
+    </div>
+
+</footer>
+
+
+<div id="carritoModal" class="modal">
+
+    <div class="modal-content">
+
+        <button class="close" onclick="cerrarCarrito()">×</button>
+
+        <h2>🛍️ Mi carrito</h2>
+
+        <div id="listaCarrito"></div>
+
+        <h3 id="total">Total: $0</h3>
+
+        <button class="checkout" onclick="finalizarCompra()">
+            Finalizar compra
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
